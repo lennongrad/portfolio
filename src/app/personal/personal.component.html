@@ -1,0 +1,48 @@
+<div id="personal-title" >
+    <div class="personal-title-character" *ngFor="let character of getTitle().split('')" (click)="clickTitle()">
+        {{character}}
+    </div>
+</div>
+<div id="personal-value" [style.width]="greatest_value.toString().length * 5 + 7.5 + 'vw'" [style.opacity]="greatest_value != 0 ? 1 : 0" [style.color]="getColor()">
+    <div id="personal-value-amount">
+        {{value}}⛯
+    </div>
+    <div id="personal-value-update" (click)="clickUpgrade()">
+        <b>Upgrade:</b> {{getUpgradeCost()}}⛯
+    </div>
+</div>
+<div id="personal-wisps">
+    <div class="wisp" *ngFor="let wisp of wisps" [ngStyle]="getWispStyle(wisp)"></div>
+</div>
+<div id="personal-flowers">
+    <img class="flower" *ngFor="let flower of flowers" [src]="flower.icon" [ngStyle]="getFlowerStyle(flower)">
+</div>
+<div id="personal-gift" (click)="clickGift()" [style.opacity]="value > 1000 ? 1 : 0" [style.pointer-events]="value > 1000 ? 'unset' : 'none'">
+    <img src="assets/present.png">
+    <div id="personal-gift-cost">1000⛯</div>
+</div> 
+<div id="personal-buttons">
+    <div class="personal-button">
+        <img src="assets\email.png" (click)="copyMessage('lennongrad00@gmail.com');" title="Copy email to clipboard">
+    </div>
+    <div class="personal-button">
+        <a target="_blank" href="https://github.com/lennongrad/">
+        <img src="assets\github.png">
+        </a>
+    </div>
+    <div class="personal-button">
+        <a target="_blank" href="https://twitter.com/lennongrad00">
+        <img src="assets\twitter.png">
+        </a>
+    </div>
+    <div class="personal-button">
+        <a target="_blank" href="https://lennongrad00.itch.io/">
+        <img src="assets\itchio.png">
+        </a>
+    </div>
+    <div class="personal-button">
+        <a target="_blank" href="https://bsky.app/profile/lennongrad.bsky.social">
+        <img src="assets\bluesky.png">
+        </a>
+    </div>
+</div>

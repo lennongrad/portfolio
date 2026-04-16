@@ -1,0 +1,30 @@
+<div id="project-list">
+    <div id="project-list-filled">
+        <div class="project-selector" *ngFor="let x of getProjects(); let i = index" [class.selected-project]="x == getSelectedProject()" (click)="clickProject(i)">
+        <div class="project-selector-name">{{x.name}}</div>
+        <div class="project-selector-division">
+            <div class="project-selector-state" *ngIf="x.state != ''">
+                <div class="project-selector-state-display">
+                    {{x.state}}
+                </div>
+            </div>
+            <div class="project-selector-date">{{x.date}}</div>
+        </div>
+        </div>
+    </div>
+</div>
+<div id="project-display">
+<div id="project-display-background"  style="background-image: url('assets/checkers.png')"></div>
+<div id="project-display-window" [style.transform]="getTransform()">
+    <div id="project-display-window-description" [innerHTML]="getSelectedProject().description"></div>
+    <div id="project-display-window-links" *ngIf="getSelectedProject().links.size">
+        <b>Links:</b>
+        <div class="project-display-window-link" *ngFor="let link of getSelectedProject().links | keyvalue">
+            <a target="_blank"  [href]="link.value">{{link.key}}</a>
+        </div>
+    </div>
+    <div id="project-display-window-image" *ngIf="getSelectedProject().image != ''"><img [src]="'/portfolio/assets/screenshots/' + getSelectedProject().image + '.png'"></div>
+    <div id="project-display-window-status" *ngIf="getSelectedProject().status != ''"><b>Status:</b> {{getSelectedProject().status}}</div>
+    <div id="project-display-window-date">{{getDates()}}</div>
+</div>
+</div>

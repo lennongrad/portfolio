@@ -17,7 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/portfolio",
+            "outputPath": {"base": "../lennongrad.github.io/portfolio", "browser": ""},
+            "baseHref": "/portfolio/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [

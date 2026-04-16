@@ -1,0 +1,162 @@
+#personal-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 8vw;
+    width: 80vw;
+    text-align: center;
+    transition: 0.15s;
+    user-select: none;
+
+    .personal-title-character{
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+
+        &:hover{
+            color: #1D9BF0;
+            animation-name: JIGGLE;
+            animation-duration: 1s;
+            animation-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            animation-iteration-count: infinite;
+        }
+
+        &:active{
+            top: 5px;
+        }
+    }
+}
+
+#personal-value{
+    position: absolute;
+    left: 1.25vw;
+    top: 1.25vw;
+    font-size: 6vw;
+    font-family: "Bungee", sans-serif;
+    text-align: center;
+    transition: 0.15s, opacity 0.5s;
+
+    cursor: pointer;
+    user-select: none;
+
+    #personal-value-amount{
+        padding: 1vw 2vw;
+        background-color: white;
+        transition: 0.15s;
+
+        &:hover{
+            background-color: #1D9BF0;
+        }
+    }
+
+    #personal-value-update{
+        color: white;
+        font-size: 2vw;
+        opacity: 0;
+        transition: 0.5s;
+
+        &:hover{
+            color: #1D9BF0;
+        }
+    }
+
+    &:hover #personal-value-update{
+        opacity: 1;
+    }
+}
+
+#personal-wisps{
+    .wisp{
+        position: absolute;
+        width: 1vw;
+        height: 1vw;
+        background-color: #1D9BF0;
+        pointer-events: none;
+        border-radius: 100%;
+        z-index: 10;
+    }
+}
+
+#personal-flowers{
+    .flower{
+        position: absolute;
+        pointer-events: none;
+        border-radius: 100%;
+        z-index: 10;
+        z-index: 1;
+    }
+}
+
+#personal-gift{
+    position: absolute;
+    right: 2vw;
+    top: 2vw;
+    filter: brightness(10) saturate(0);
+    transition: 0.1s;
+    user-select: none;
+    cursor: pointer;
+
+    img{
+        width: 5vw;
+    }
+
+    #personal-gift-cost{
+        color: white;
+        font-family: "Bungee", sans-serif;
+        opacity: 0;
+        transition: 0.1s;
+    }
+
+    &:hover{
+        filter: brightness(1) saturate(1);
+
+        #personal-gift-cost{
+            opacity: 1;
+        }
+    }
+}
+
+#personal-buttons{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 1vw;
+    padding-left: 2vw;
+    display: flex;
+    flex-direction: row;
+
+    .personal-button{
+        margin-right: 1.5vw;
+        filter: brightness(10) saturate(0);
+        transition: 0.1s;
+        user-select: none;
+        cursor: pointer;
+
+        &:hover{
+            filter: brightness(1) saturate(1);
+        }
+
+        img {
+            width: 8vw;
+            filter: drop-shadow(0 0 1px #1D9BF0);
+        }
+    }
+}
+
+@keyframes JIGGLE {
+    0% {
+        transform: rotate(0)
+    }
+    25% { 
+        transform: rotate(4deg)
+    }
+    50% {
+        transform: rotate(0)
+    }
+    75% {
+        transform: rotate(-4deg)
+    }
+}

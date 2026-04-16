@@ -1,1 +1,7 @@
-big big chungus
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bungee&family=Bungee+Hairline&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+<app-personal [style.top]="getTop()" [style.background-color]="getColor()"></app-personal>
+<app-projects [style.top]="getTop()"></app-projects>
+
+<button class="project-button" id="random-project-button" [class.at-top]="showProjects" (click)="clickRandomProject()" [style.color]="getColor()">Random Project</button>
+<button class="project-button" id="show-project-button" [class.at-top]="showProjects" (click)="clickProjects()" [style.color]="getColor()">All Projects</button>

@@ -1,0 +1,301 @@
+
+export interface Project{
+  name: string,
+  description: string,
+  links: Map<string, string>,
+  status: string,
+  state: string,
+  date: string,
+  start: string,
+  image: string,
+  mainLink: string
+}
+
+export const PROJECTS: Array<Project> = [
+    {
+        name: "Overly Familiar",
+        description: "PVZ-inspired tower defense with 'extraction' elements.",
+        links: new Map<string,string>(),
+        mainLink: "",
+        state: "indev",
+        status: "My main focus at the moment, and the first game that I'm really motivated to take to full release.",
+        image: "",
+        start: "March 2026",
+        date: "April 2026"
+    },
+    {
+        name: "Hymn & Hewn",
+        description: "Roguelike minesweeper RPG. A submission to the 7DRL game jam. Made in collaboration with my friends Lilip and Squid.",
+        links: new Map<string,string>([["itch.io", "https://lennongrad00.itch.io/hymnhewn"], ["Github", "https://github.com/lennongrad/HymnHewn"]]),
+        mainLink: "itch.io",
+        state: "finished",
+        status: "",
+        image: "hymnnhewn",
+        start: "",
+        date: "March 2026"
+    },
+    {
+        name: "3D RPG",
+        description: "Paper Mario fangame with unique enemies, partners, and badge system, plus unique environments. My most detailed 3D game, and possibly the game I have spent the most time on.",
+        links: new Map<string,string>([["itch.io", "https://lennongrad00.itch.io/upmfg"], ["Github", "https://github.com/lennongrad/PMFG-4.0"]]),
+        mainLink: "itch.io",
+        state: "abandoned",
+        status: "It's hard to justify working on fangames, since they're a bit of a dead end, and the code would need major refactoring to make additions not a chore. I don't think I'm going to work on this again.",
+        image: "papermario",
+        start: "June 2020",
+        date: "July 2024"
+    },
+    {
+        name: "Egghub",
+        description: "An online repository of my custom Magic: The Gathering card designs using <a href='https://github.com/magictheegg'>magictheegg</a>'s system.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/mtg/"], ["Github", "https://github.com/lennongrad/mtg"]]),
+        mainLink: "Site",
+        state: "paused",
+        status: "I'm still working on a lot of custom sets that I plan to eventualy upload here, but for now I'm focusing on original projects.",
+        image: "mtg",
+        start: "",
+        date: "January 2026"
+    },
+    {
+        name: "MTG Graphs",
+        description: "Visualizations of the use of different MTG mechanics/keywords over time, and how they're distributed among colors within sets.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/mechanicgraphs/"], ["Github", "https://github.com/lennongrad/mechanicgraphs"]]),
+        mainLink: "Site",
+        state: "paused",
+        status: "I need to finally update it for current sets, and part of that will involve updating the annoying workflow that I established before.",
+        image: "mechanicgraphs",
+        start: "",
+        date: "November 2024"
+    },
+    {
+        name: "Arcade Bros.",
+        description: "A fan recreation of the arcade version of <i>Mario Bros.</i> in Godot.",
+        links: new Map<string,string>([["Github", "https://github.com/lennongrad/arcadebros"]]),
+        mainLink: "Github",
+        state: "abandoned",
+        status: "I originally planned to implement some of the new features I'd thought about since I was a kid, but I lost motivation. It's hard to justify spending times on fan projects at this point.",
+        image: "mariobros",
+        start: "",
+        date: "February 2025"
+    },
+    {
+        name: "slashGOV",
+        description: "An online 'news' site styled after the <i>Washington Post</i>. Made for an AP Government project in senior year of high school, it focuses on discussion of marijuana legislation.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/gov"]]),
+        mainLink: "Site",
+        state: "finished",
+        status: "",
+        image: "slashgov",
+        start: "",
+        date: "December 2018"
+    },
+    {
+        name: "Puzzle League",
+        description: "A <i>Panel de Pon</i>/<i>Puzzle League</i> fangame made in Godot. Has a custom 1v1 mode with random items.",
+        links: new Map<string,string>([["Github", "https://github.com/lennongrad/mariopuzzleleague"]]),
+        mainLink: "Github",
+        state: "paused",
+        status: "The game is possibly the most detailed and polished of anything I've made, but it still has some issues I want to resolve before I even get to implementing a story mode like I originally wanted. Unlike other fangames, I don't feel as bad potentially spending time on this in the future.",
+        image: "puzzleleague",
+        start: "June 2020",
+        date: "June 2024"
+    },
+    {
+        name: "Dragons",
+        description: "A dragon hatchery simulation game with custom dragon designs and idle elements.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/dragons/"]]),
+        mainLink: "Site",
+        state: "abandoned",
+        status: "It was a collaboration with a friend who was going to design more eggs/dragons, but they never got around to it and we drifted apart. If I ever did anything like this again, it would be from scratch.",
+        image: "dragons",
+        start: "",
+        date: "April 2019"
+    },
+    {
+        name: "Resource Game",
+        description: "Tabletop card game about building up resources and bidding them on projects with hidden goals.",
+        links: new Map<string,string>([["Github", "https://github.com/lennongrad/ProjectCardGenerator"]]),
+        mainLink: "Github",
+        state: "paused",
+        status: "Playtesting didn't go quite how I hoped, and I won't be able to do more playtests for awhile, so I'm putting it on the backburner for now. I'm put too much time into it to abandon it entirely, though.",
+        image: "resourcegame",
+        start: "",
+        date: "January 2026"
+    },
+    {
+        name: "Nortlings",
+        description: "An original party card game based around drawing silly creatures.",
+        links: new Map<string,string>([["Github", "https://github.com/lennongrad/Nortlings"]]),
+        mainLink: "Github",
+        state: "paused",
+        status: "I want to commission a friend to draw original art for the game, and then maybe I'll put it on itch.",
+        image: "nortlings",
+        start: "",
+        date: "March 2026"
+    },
+    {
+        name: "Party House",
+        description: "A fanmade card game recreation of the <i>Party House</i> game from <i>UFO50</i>.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/party-house/"], ["Github", "https://github.com/lennongrad/partyhousecggenerator"]]),
+        mainLink: "Site",
+        state: "paused",
+        status: "The designer site is finished and I've printed it out. I still want to put it on itch.io or something though.",
+        image: "partyhouse",
+        start: "",
+        date: "November 2025"
+    },
+    {
+        name: "4X Game",
+        description: "4X game modeled after <i>Civilization</i>. Has some innovations like city-level builders and universal districts that kind-of predicted changes in <i>Civilization VII</i>.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/3d/"]]),
+        mainLink: "Site",
+        state: "abandoned",
+        status: "The original code was a massive mess. It used three.js and was basically all coded in a single JavaScript file. I don't have any desire to continue working in 3D with JS, it's awful, and I don't have that much desire to make this straight of a Civilization-type game either.",
+        image: "civgame",
+        start: "",
+        date: "November 2019"
+    },
+    {
+        name: "Sensus",
+        description: "A concept for a <i>Slay the Spire</i> type deckbuilding RPG that uses a block-pushing system, sort of an evolution of the Defect orb mechanic. Has an HTML/JS implementation and a Godot implementation.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/sensus/"], ["Github", "https://github.com/lennongrad/Sensus"]]),
+        mainLink: "Github",
+        state: "paused",
+        status: "I would like to make a full-game version of this one day, but the art needs for a card game are daunting, and I'm not sure how well the block-pushing actually plays.",
+        image: "sensus",
+        start: "January 2020",
+        date: "March 2026"
+    },
+    {
+        name: "Wanted",
+        description: "A hastily-made recreation of the <i>Super Mario 64 DS</i>/<i>New Super Mario Bros.</i> minigame <i>Wanted!</i>. Created when the game was all the craze on Twitter for a month.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/wanted/"]]),
+        mainLink: "Site",
+        state: "finished",
+        status: "",
+        image: "wanted",
+        start: "",
+        date: "November 2024"
+    },
+    {
+        name: "Emperor",
+        description: "A 4X historical simulation game in a Paradox style, especially inspired by <i>Europa Universalis IV</i>. Has an original world and map.",
+        links: new Map<string,string>([["Github", "https://github.com/lennongrad/Emperor"]]),
+        mainLink: "Github",
+        state: "paused",
+        status: "The map and its implementation in the game is some of the most proud I've ever been with something I've made, but I never went beyond that. I'd want to recreate it in Godot and really learn how to do C++ for the backend, because this sort of game is very computationally intensive.",
+        image: "emperor",
+        start: "",
+        date: "August 2025"
+    },
+    {
+        name: "Reaper's Keep",
+        description: "A tower defense card game. Made for a university game development class project.",
+        links: new Map<string,string>([["Game", "https://drive.google.com/file/d/1XDB6VF3dQa9oHimKCEWcC78d53VMsWik/view"], ["Github", "https://github.com/lennongrad/C4G"]]),
+        mainLink: "Game",
+        state: "finished",
+        status: "There's a lot more I could add, but it is finished in the sense that it was submitted to the class and that I never had higher hopes for it than that.",
+        image: "reaperskeep",
+        start: "February 2022",
+        date: "May 2022"
+    },
+    {
+        name: "DPS",
+        description: "An MMO inspired RPG idle game in Angular.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/dps"], ["Github", "https://github.com/lennongrad/damagepersecond"]]),
+        mainLink: "Site",
+        state: "paused",
+        status: "I spent a lot of time on it, and some friends have played it and said they really enjoyed it. I've seen another game with quite the same concept, and it wouldn't be that hard to add more to it and clean it up some, but I'm not sure it's worth it over other projects.",
+        image: "dps",
+        start: "",
+        date: "August 2022"
+    },
+    {
+        name: "Gardening",
+        description: "A <i>Toontown</i> inspired idle game with a <i>Wordle</i> twist. Combine seeds to make new plants, and watch them grow over time.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/gardening/"], ["Github", "https://github.com/lennongrad/gardener"]]),
+        mainLink: "Site",
+        state: "paused",
+        status: "The game is honestly mostly finished, and it wouldn't take much work to add some polish and post it somewhere eventually.",
+        image: "gardening",
+        start: "",
+        date: "April 2024"
+    },
+    {
+        name: "Card Archetypes",
+        description: "Visualization of certain types of <i>Magic: The Gathering</i> cards that make up the backbone of Limited formats.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/CardArchetypeGuide/"], ["Github", "https://github.com/lennongrad/CardArchetypeGuide"]]),
+        mainLink: "Site",
+        state: "abandoned",
+        status: "The concept was always a little silly, and even my exceptionally obsessed MTG friends didn't enjoy it much. I'll leave it up for posterity.",
+        image: "cardarchetypes",
+        start: "",
+        date: "March 2023"
+    },
+    {
+        name: "Sokoban Game",
+        description: "Prototype for an abstract puzzle game, a la <i>Tetris</i>, using sokoban (block pushing) mechanics.",
+        links: new Map<string,string>([["Github", "https://github.com/lennongrad/SokobanGame"]]),
+        mainLink: "Github",
+        state: "paused",
+        status: "The prototype wasn't quite as fun as I was hoping from the concept, though I did play it for awhile. I need to think of more mechanics to spice it up first.",
+        image: "sokoban",
+        start: "",
+        date: "February 2026"
+    },
+    {
+        name: "Agriculture",
+        description: "My first ever independent coding project. An HTML idle game with tech trees and other complex upgrades, inspired by <i>Cookie Clicker</i>.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/agriculture/"]]),
+        mainLink: "itch.io",
+        state: "abandoned",
+        status: "While I appreciate it in the story of my life, there's no reason to return to this. If I wanted to make another idle game, I'd use a more interesting concept.",
+        image: "agriculture",
+        start: "April 2018",
+        date: "October 2018"
+    },
+    {
+        name: "Card Collector Idle",
+        description: "An idle game based around collecting trading cards with original, <i>Pokémon</i> style creatures.",
+        links: new Map<string,string>([["Github", "https://github.com/lennongrad/cardcollectoridle"]]),
+        mainLink: "Github",
+        state: "indev",
+        status: "I haven't worked on it in awhile, but it shouldn't take much to finish it to an acceptable point, and I think some people would get a kick out of it.",
+        image: "cardcollectoridle",
+        start: "",
+        date: "December 2024"
+    },
+    {
+        name: "Godot Effect Framework",
+        description: "A Godot plugin/framework for managing complex effects in games. Originally designed for <i>Sensus</i>, I've started using it for <i>Overly Familiar</i> as well, and it'll likely be part of all of my strategy game Godot projects going into the future.",
+        links: new Map<string,string>([["Github", "https://github.com/lennongrad/GodotEffectFramework"]]),
+        mainLink: "Github",
+        state: "indev",
+        status: "As I use it in my projects, I keep adding features, and I try to keep it separated enough from the game logic to where it can work generically. Eventually I might release it more publically.",
+        image: "",
+        start: "",
+        date: "March 2026"
+    },
+    {
+        name: "Discord Parser",
+        description: "A Discord bot client that can be configured to handle parsing messages for any game. Currently has setups for <i>Slay the Spire 2</i> and <i>Blood on the Clocktower</i>.",
+        links: new Map<string,string>([["Github", "https://github.com/lennongrad/ParserResponseClient"]]),
+        mainLink: "Github",
+        state: "paused",
+        status: "The code works, and I'm still using it in my servers, but it needs cleaning up before I can post it anywhere publically.",
+        image: "parser",
+        start: "",
+        date: "March 2026"
+    },
+    {
+        name: "Platformer Strategy",
+        description: "Prototype for a strategy RPG that's 2D in the style of a platformer, using line-of-sight for projectiles.",
+        links: new Map<string,string>([["Site", "https://lennongrad.com/platformerstrategy/"]]),
+        mainLink: "Site",
+        state: "paused",
+        status: "The idea is still interesting, but I'd have to think a lot about how exactly to implement it.",
+        image: "platformerstrategy",
+        start: "",
+        date: "March 2020"
+    },
+]
